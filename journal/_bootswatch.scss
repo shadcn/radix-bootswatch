@@ -125,7 +125,7 @@ hr {
 	.navbar-search .search-query:hover {
 		border: 2px solid $grayLighter;
 		color: $textColor;
-		@include placeholder($gray);
+		@include ctb-placeholder($gray);
 	}
 }
 
