@@ -102,7 +102,7 @@ hr {
 		line-height: normal;
 		color: $grayLight;
 		text-shadow: none;
-		@include placeholder($gray);
+		@include ctb-placeholder($gray);
 	}
 }
 
@@ -418,7 +418,7 @@ input[type="radio"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
   @include box-shadow(none); // override for file inputs
-  @include tab-focus();
+  @include ctb-tab-focus();
 }
 
 legend, label {
