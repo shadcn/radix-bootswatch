@@ -43,7 +43,7 @@ blockquote {
 // -----------------------------------------------------
 
 body {
-	@include background-image(radial-gradient(lighten(#0F8790, 7%), #0F8790));
+	@include ctb-gradient-radial(lighten(#0F8790, 7%), #0F8790);
 }
 
 hr {
@@ -382,7 +382,7 @@ div.subnav-fixed {
   // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
   &:active,
   &.active {
-    background-color: darken($color, 15%);
+    background-color: darken($color, 15%) e("\9");
   }
 }
 
@@ -392,7 +392,7 @@ div.subnav-fixed {
 	background-image: none;
 	text-shadow: none;
 	@include box-shadow(none);
-	@include buttonBackgroundCustom($btnBackground)
+	@include ctb-buttonBackgroundCustom($btnBackground)
 }
 
 .btn-group .btn:first-child {
@@ -412,31 +412,31 @@ div.subnav-fixed {
 }
 
 .btn-primary {
-  @include buttonBackgroundCustom($btnPrimaryBackground);
+  @include ctb-buttonBackgroundCustom($btnPrimaryBackground);
 }
 
 .btn-info {
-  @include buttonBackgroundCustom($btnInfoBackground);
+  @include ctb-buttonBackgroundCustom($btnInfoBackground);
 }
 
 .btn-success {
-  @include buttonBackgroundCustom($btnSuccessBackground);
+  @include ctb-buttonBackgroundCustom($btnSuccessBackground);
 }
 
 .btn-warning {
-  @include buttonBackgroundCustom($btnWarningBackground);
+  @include ctb-buttonBackgroundCustom($btnWarningBackground);
 }
 
 .btn-danger {
-  @include buttonBackgroundCustom($btnDangerBackground);
+  @include ctb-buttonBackgroundCustom($btnDangerBackground);
 }
 
 .btn-inverse {
-  @include buttonBackgroundCustom($btnInverseBackground);
+  @include ctb-buttonBackgroundCustom($btnInverseBackground);
 }
 
 .btn-link {
-	@include buttonBackgroundCustom($btnPrimaryBackground);
+	@include ctb-buttonBackgroundCustom($btnPrimaryBackground);
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -652,7 +652,7 @@ input, textarea, .search-query, .uneditable-input,
 }
 
 .progress-danger.progress-striped .bar {
-	@include background-image(striped-gradient(#AD1D28));
+	@include ctb-gradient-striped(#AD1D28);
 }
 
 .progress-success .bar {
@@ -661,7 +661,7 @@ input, textarea, .search-query, .uneditable-input,
 }
 
 .progress-success.progress-striped .bar {
-	@include background-image(striped-gradient($green));
+	@include ctb-gradient-striped($green);
 }
 
 .progress-info .bar {
@@ -670,7 +670,7 @@ input, textarea, .search-query, .uneditable-input,
 }
 
 .progress-info.progress-striped .bar {
-	@include background-image(striped-gradient($blue));
+	@include ctb-gradient-striped($blue);
 }
 
 .modal {
