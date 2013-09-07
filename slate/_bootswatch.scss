@@ -31,7 +31,7 @@ hr, legend, .page-header {
 .navbar {
 
 	.navbar-inner {
-		@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
+		@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70, $grayDark);
 	}
 
 	.brand {
@@ -87,7 +87,7 @@ hr, legend, .page-header {
 .navbar-inverse {
 
 	.navbar-inner {
-		@include ctb-gradient-vertical-three-colors(darken($grayDarker, 3%), darken($grayDarker, 8%), 70%, darken($grayDarker, 8%));
+		@include ctb-gradient-vertical-three-colors(darken($grayDarker, 3%), darken($grayDarker, 8%), 70, darken($grayDarker, 8%));
 	}
 
 	.nav li > a {
@@ -144,7 +144,7 @@ hr, legend, .page-header {
 
 div.subnav {
 
-	@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
+	@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70, $grayDark);
 	border: 1px solid transparent;
 	@include box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
 
@@ -206,7 +206,7 @@ div.subnav {
 	}
 
 	& > li > a {
-		@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
+		@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70, $grayDark);
 		@include box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
 		border: none;
 		color: $grayLight;
@@ -282,7 +282,7 @@ div.subnav {
 
 .breadcrumb {
 	border: 1px solid transparent;
-	@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
+	@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70, $grayDark);
 	@include box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
 
 	a {
@@ -309,7 +309,7 @@ div.subnav {
 		border-right: 1px solid darken($gray, 15%);
 		border-top: none;
 		border-bottom: none;
-		@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
+		@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70, $grayDark);
 		@include box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
 		color: $grayLighter;
 		font-weight: bold;
@@ -339,7 +339,7 @@ div.subnav {
 		border-right: 1px solid darken($gray, 15%);
 		border-top: none;
 		border-bottom: none;
-		@include ctb-gradient-vertical-three-colors($grayLight, $gray, 70%, $gray);
+		@include ctb-gradient-vertical-three-colors($grayLight, $gray, 70, $gray);
 	}
 }
 
@@ -349,7 +349,7 @@ div.subnav {
 	li > span {
 		border: 1px solid transparent;
 		@include box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
-		@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70%, $grayDark);
+		@include ctb-gradient-vertical-three-colors($gray, $grayDark, 70, $grayDark);
 
 		&:hover {
 			@include ctb-gradient-directional($grayDarker, $grayDark, 280deg);
