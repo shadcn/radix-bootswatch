@@ -382,7 +382,7 @@ div.subnav-fixed {
   // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
   &:active,
   &.active {
-    background-color: darken($color, 15%) e("\9");
+    background-color: darken($color, 15%);
   }
 }
 
@@ -392,7 +392,7 @@ div.subnav-fixed {
 	background-image: none;
 	text-shadow: none;
 	@include box-shadow(none);
-	@include ctb-buttonBackgroundCustom($btnBackground)
+	@include buttonBackgroundCustom($btnBackground)
 }
 
 .btn-group .btn:first-child {
@@ -412,31 +412,31 @@ div.subnav-fixed {
 }
 
 .btn-primary {
-  @include ctb-buttonBackgroundCustom($btnPrimaryBackground);
+  @include buttonBackgroundCustom($btnPrimaryBackground);
 }
 
 .btn-info {
-  @include ctb-buttonBackgroundCustom($btnInfoBackground);
+  @include buttonBackgroundCustom($btnInfoBackground);
 }
 
 .btn-success {
-  @include ctb-buttonBackgroundCustom($btnSuccessBackground);
+  @include buttonBackgroundCustom($btnSuccessBackground);
 }
 
 .btn-warning {
-  @include ctb-buttonBackgroundCustom($btnWarningBackground);
+  @include buttonBackgroundCustom($btnWarningBackground);
 }
 
 .btn-danger {
-  @include ctb-buttonBackgroundCustom($btnDangerBackground);
+  @include buttonBackgroundCustom($btnDangerBackground);
 }
 
 .btn-inverse {
-  @include ctb-buttonBackgroundCustom($btnInverseBackground);
+  @include buttonBackgroundCustom($btnInverseBackground);
 }
 
 .btn-link {
-	@include ctb-buttonBackgroundCustom($btnPrimaryBackground);
+	@include buttonBackgroundCustom($btnPrimaryBackground);
 }
 
 [class^="icon-"], [class*=" icon-"] {
