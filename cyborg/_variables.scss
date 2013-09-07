@@ -1,4 +1,4 @@
-// Amelia 2.2.2
+// Cyborg 2.2.2
 // Variables
 // --------------------------------------------------
 
@@ -6,44 +6,45 @@
 // Global values
 // --------------------------------------------------
 
+
 // Grays
 // -------------------------
 $black:                 #000;
-$grayDarker:            #111;
-$grayDark:              #444;
-$gray:                  #555;
-$grayLight:             #aaa;
-$grayLighter:           #ddd;
+$grayDarker:            #020202;
+$grayDark:              #222;
+$gray:                  #999;
+$grayLight:             #ADAFAE;
+$grayLighter:           #eee;
 $white:                 #fff;
 
 
 // Accent colors
 // -------------------------
-$blue:                  #00BCE1;
-$blueDark:              #1269B0;
-$green:                 #48CA3B;
-$red:                   #AD1D28;
-$yellow:                #DEBB27;
-$orange:                #DF6E1E;
-$pink:                  #FFBCB9;
-$purple:                #4D3A7D;
+$blue:                  #33B5E5;
+$blueDark:              #0099CC;
+$green:                 #669900;
+$red:                   #CC0000;
+$yellow:                #ECBB13;
+$orange:                #FF8800;
+$pink:                  #FF4444;
+$purple:                #9933CC;
 
 
 // Scaffolding
 // -------------------------
-$bodyBackground:        #003F4D;
-$textColor:             rgba(255, 255, 255, 0.9);
+$bodyBackground:        #060606;
+$textColor:             $gray;
 
 
 // Links
 // -------------------------
-$linkColor:             lighten($yellow, 15%);
-$linkColorHover:        $linkColor;
+$linkColor:             $blue;
+$linkColorHover:        $white;
 
 
 // Typography
 // -------------------------
-$sansFontFamily:        'Cabin', Verdana, sans-serif;
+$sansFontFamily:        'Droid Sans', sans-serif;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 $monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
@@ -52,9 +53,9 @@ $baseFontFamily:        $sansFontFamily;
 $baseLineHeight:        20px;
 $altFontFamily:         $serifFontFamily;
 
-$headingsFontFamily:    'Lobster', cursive; // empty to use BS default, $baseFontFamily
+$headingsFontFamily:    inherit; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    normal;    // instead of browser default, bold
-$headingsColor:         inherit; // empty to use BS default, $textColor
+$headingsColor:         $white; // empty to use BS default, $textColor
 
 
 // Component sizing
@@ -65,91 +66,70 @@ $fontSizeLarge:         $baseFontSize * 1.25; // ~18px
 $fontSizeSmall:         $baseFontSize * 0.85; // ~12px
 $fontSizeMini:          $baseFontSize * 0.75; // ~11px
 
-$paddingLarge:          20px 24px; // 58px
-$paddingSmall:          8px 12px;  // 34px
-$paddingMini:           4px 8px;   // 28px
+$paddingLarge:          11px 19px; // 44px
+$paddingSmall:          2px 10px;  // 26px
+$paddingMini:           0px 6px;   // 22px
 
-$baseBorderRadius:      0;
+$baseBorderRadius:      4px;
 $borderRadiusLarge:     6px;
 $borderRadiusSmall:     3px;
 
 
 // Tables
 // -------------------------
-$tableBackground:                   lighten(#147E88, 10%); // overall background-color
-$tableBackgroundAccent:             lighten(#147E88, 15%); // for striping
-$tableBackgroundHover:              rgba(255, 255, 255, 0.4); // for hover
-$tableBorder:                       lighten(#147E88, 12%); // table and cell border
-
-
-// Navbar
-// -------------------------
-$navbarCollapseWidth:             979px;
-$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
-
-$navbarHeight:                    50px;
-$navbarBackgroundHighlight:       $red;
-$navbarBackground:                $red;
-$navbarBorder:                    darken($navbarBackground, 12%);
-
-$navbarText:                      $white;
-$navbarLinkColor:                 $white;
-$navbarLinkColorHover:            $white;
-$navbarLinkColorActive:           $navbarLinkColorHover;
-$navbarLinkBackgroundHover:       lighten($navbarBackground, 10%);
-$navbarLinkBackgroundActive:      lighten($navbarBackground, 10%);
-
-$navbarBrandColor:                $navbarLinkColor;
-
+$tableBackground:                   transparent; // overall background-color
+$tableBackgroundAccent:             rgba(100, 100, 100, 0.1); // for striping
+$tableBackgroundHover:              $grayDark; // for hover
+$tableBorder:                       $grayDark; // table and cell border
 
 // Buttons
 // -------------------------
-$btnBackground:                     $grayLighter;
-$btnBackgroundHighlight:            $grayLighter;
+$btnBackground:                     darken($gray, 20%);
+$btnBackgroundHighlight:            darken($gray, 25%);
 $btnBorder:                         rgba(0, 0, 0, 0);
 
-$btnPrimaryBackground:              $navbarBackground;
-$btnPrimaryBackgroundHighlight:     $navbarBackground;
+$btnPrimaryBackground:              $blueDark;
+$btnPrimaryBackgroundHighlight:     darken($blueDark, 10%);
 
-$btnInfoBackground:                 $purple;
-$btnInfoBackgroundHighlight:        $purple;
+$btnInfoBackground:                 darken($gray, 40%);
+$btnInfoBackgroundHighlight:        darken($gray, 50%);
 
-$btnSuccessBackground:              $green;
+$btnSuccessBackground:              lighten($green, 10%);
 $btnSuccessBackgroundHighlight:     $green;
 
-$btnWarningBackground:              $orange;
+$btnWarningBackground:              lighten($orange, 15%);
 $btnWarningBackgroundHighlight:     $orange;
 
-$btnDangerBackground:               $yellow;
-$btnDangerBackgroundHighlight:      $yellow;
+$btnDangerBackground:               lighten($red, 10%);
+$btnDangerBackgroundHighlight:      $red;
 
-$btnInverseBackground:              #27666D;
-$btnInverseBackgroundHighlight:     #27666D;
+$btnInverseBackground:              lighten($purple, 5%);
+$btnInverseBackgroundHighlight:     $purple;
 
 
 // Forms
 // -------------------------
-$inputBackground:               $white;
-$inputBorder:                   transparent;
+$inputBackground:               #ccc;
+$inputBorder:                   #bbb;
 $inputBorderRadius:             $baseBorderRadius;
-$inputDisabledBackground:       $grayLighter;
+$inputDisabledBackground:       #555;
 $formActionsBackground:         transparent;
 $inputHeight:                   $baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
 
 
 // Dropdowns
 // -------------------------
-$dropdownBackground:            $white;
+$dropdownBackground:            #131517;
 $dropdownBorder:                rgba(0,0,0,.2);
-$dropdownDividerTop:            #e5e5e5;
-$dropdownDividerBottom:         $white;
+$dropdownDividerTop:            transparent;
+$dropdownDividerBottom:         #222;
 
-$dropdownLinkColor:             $grayDark;
+$dropdownLinkColor:             $textColor;
 $dropdownLinkColorHover:        $white;
 $dropdownLinkColorActive:       $white;
 
-$dropdownLinkBackgroundActive:  $red;
-$dropdownLinkBackgroundHover:   $red;
+$dropdownLinkBackgroundActive:  $linkColor;
+$dropdownLinkBackgroundHover:   $linkColor;
 
 
 
@@ -182,7 +162,7 @@ $placeholderText:         $grayLight;
 
 // Hr border color
 // -------------------------
-$hrBorder:                transparent;
+$hrBorder:                $grayDark;
 
 
 // Horizontal forms & lists
@@ -192,20 +172,39 @@ $horizontalComponentOffset:       180px;
 
 // Wells
 // -------------------------
-$wellBackground:                  #3CB9C6;
+$wellBackground:                  #131517;
 
+
+// Navbar
+// -------------------------
+$navbarCollapseWidth:             979px;
+$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
+
+$navbarHeight:                    50px;
+$navbarBackgroundHighlight:       $grayDarker;
+$navbarBackground:                $grayDarker;
+$navbarBorder:                    darken($navbarBackground, 12%);
+
+$navbarText:                      $grayLight;
+$navbarLinkColor:                 $grayLight;
+$navbarLinkColorHover:            $white;
+$navbarLinkColorActive:           $navbarLinkColorHover;
+$navbarLinkBackgroundHover:       transparent;
+$navbarLinkBackgroundActive:      $navbarBackground;
+
+$navbarBrandColor:                $navbarLinkColor;
 
 // Inverted navbar
-$navbarInverseBackground:                $yellow;
-$navbarInverseBackgroundHighlight:       $yellow;
-$navbarInverseBorder:                    rgba(0, 0, 0, 0.1);
+$navbarInverseBackground:                #252A30;
+$navbarInverseBackgroundHighlight:       #252A30;
+$navbarInverseBorder:                    transparent;
 
-$navbarInverseText:                      $white;
-$navbarInverseLinkColor:                 $white;
+$navbarInverseText:                      $grayLight;
+$navbarInverseLinkColor:                 $grayLight;
 $navbarInverseLinkColorHover:            $white;
-$navbarInverseLinkColorActive:           $white;
-$navbarInverseLinkBackgroundHover:       rgba(255, 255, 255, 0.2);
-$navbarInverseLinkBackgroundActive:      rgba(255, 255, 255, 0.2);
+$navbarInverseLinkColorActive:           $navbarInverseLinkColorHover;
+$navbarInverseLinkBackgroundHover:       #242A31;
+$navbarInverseLinkBackgroundActive:      $navbarInverseLinkBackgroundHover;
 
 $navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
 $navbarInverseSearchBackgroundFocus:     $white;
@@ -217,48 +216,48 @@ $navbarInverseBrandColor:                $navbarInverseLinkColor;
 
 // Pagination
 // -------------------------
-$paginationBackground:                #3CB9C6;
+$paginationBackground:                $bodyBackground;
 $paginationBorder:                    transparent;
-$paginationActiveBackground:          rgba(255, 255, 255, 0.4);
+$paginationActiveBackground:          $blue;
 
 
 // Hero unit
 // -------------------------
-$heroUnitBackground:              #3CB9C6;
+$heroUnitBackground:              #131517;
 $heroUnitHeadingColor:            inherit;
 $heroUnitLeadColor:               inherit;
 
 
 // Form states and alerts
 // -------------------------
-$warningText:             #c09853;
-$warningBackground:       #fcf8e3;
-$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
+$warningText:             darken(#c09853, 10%);
+$warningBackground:       $grayLighter;
+$warningBorder:           transparent;
 
 $errorText:               #b94a48;
-$errorBackground:         #f2dede;
+$errorBackground:         $grayLighter;
 $errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
 
 $successText:             #468847;
-$successBackground:       #dff0d8;
+$successBackground:       $grayLighter;
 $successBorder:           darken(adjust-hue($successBackground, -10), 5%);
 
-$infoText:                #3a87ad;
-$infoBackground:          #d9edf7;
+$infoText:                $blueDark;
+$infoBackground:          $grayLighter;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
 
 
 // Tooltips and popovers
 // -------------------------
 $tooltipColor:            #fff;
-$tooltipBackground:       #000;
+$tooltipBackground:       $heroUnitBackground;
 $tooltipArrowWidth:       5px;
 $tooltipArrowColor:       $tooltipBackground;
 
-$popoverBackground:       #fff;
+$popoverBackground:       $heroUnitBackground;
 $popoverArrowWidth:       10px;
-$popoverArrowColor:       #fff;
-$popoverTitleBackground:  $navbarBackground;
+$popoverArrowColor:       $popoverBackground;
+$popoverTitleBackground:  $popoverBackground;
 
 // Special enhancement for popovers
 $popoverArrowOuterWidth:  $popoverArrowWidth + 1;
