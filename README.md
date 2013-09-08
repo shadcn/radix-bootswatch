@@ -1,5 +1,6 @@
 Radix Bootswatch
 ================
+#### Bootswatch theme for Drupal
 
 Bootswatch for Radix theme.
 
@@ -10,7 +11,7 @@ Bootswatch for Radix theme.
 ### Manually
 
 1. Download Radix.
-2. Create a Radix subtheme See the guide [here](https://drupal.org/node/1896382).
+2. Create a Radix subtheme. See the guide [here](https://drupal.org/node/1896382).
 3. Download a Bootswatch theme and replace `_bootswatch.scss` and `_variables.scss` in your subtheme `assets/sass/bootswatch` theme.
 4. Run `compass clean && compass watch`.
 
