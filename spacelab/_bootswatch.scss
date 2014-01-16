@@ -1,247 +1,115 @@
-// Spacelab 2.2.2
+// Spacelab 3.0.0
 // Bootswatch
-// -----------------------------------------------------
-
-
-// TYPOGRAPHY
 // -----------------------------------------------------
 
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
 
-// SCAFFOLDING
-// -----------------------------------------------------
+@mixin btn-shadow($color) {
 
-// NAVBAR
-// -----------------------------------------------------
+	@include gradient-vertical-three-colors(lighten($color, 15%), $color, 50%, darken($color, 4%));
+	border: 1px solid darken($color, 10%);
+}
+
+// Navbar =====================================================================
 
 .navbar {
 
-	.navbar-inner {
-		@include box-shadow(0 1px 0 rgba(255,255,255,0.4), 0 1px 0 rgba(0,0,0,0.8));
+	@include btn-shadow($navbar-default-bg);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+	filter: none;
+
+	.caret,
+	.caret:hover {
+		@include transition(border-color ease-in-out .2s);
 	}
 
-	.brand {
-
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-
-		&:hover {
-			color: $navbarLinkColorHover;
-		}
-	}
-
-	.nav > li > a {
-		padding: 11px 10px 8px;
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-	}
-
-	.navbar-text {
-		padding: 11px 10px 8px;
-		line-height: inherit;
-	}
-
-	.navbar-search .search-query,
-	.navbar-search .search-query:hover {
-		margin-bottom: 0;
-		line-height: normal;
-		color: $grayLight;
-		@include ctb-placeholder($grayLight);
-		@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
-
-	    &:focus,
-	    &.focused {
-			@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
-			color: $textColor;
-		}
+	.dropdown-menu {
+		text-shadow: none;
 	}
 }
 
 .navbar-inverse {
-
-	.brand {
-		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-
-		&:hover {
-			color: $white;
-		}
-	}
-
-	.nav > li > a {
-		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-	}
-
-	.nav li.dropdown.open > .dropdown-toggle .caret,
-	.nav li.dropdown:hover > .dropdown-toggle .caret,
-	.nav li.dropdown.open:hover > .dropdown-toggle .caret {
-		border-top-color: $white;
-	}
-
-	.navbar-search .search-query,
-	.navbar-search .search-query:hover {
-
-		color: $white;
-
-		@include ctb-placeholder($grayLighter);
-	}
+        @include btn-shadow($navbar-inverse-bg);
+        filter: none;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: $navbarCollapseWidth) {
-
-	.navbar .nav-collapse {
-
-		.nav li > a:hover {
-			background-color: $linkColor;
-			color: $white;
-			text-shadow: none;
-		}
-
-		.navbar-search {
-			border-top: none;
-			border-bottom: none;
-		}
-	}
-
-	.navbar-inverse .nav-collapse {
-
-		.nav li > a {
-			color: $grayLighter;
-
-			&:hover {
-				background-color: $linkColor !important;
-			}
-		}
-
-		.nav-header {
-			color: $grayLighter;
-		}
-	}
+.navbar-nav > li > a,
+.navbar-nav > li > a:hover {
+        padding-top: $navbar-padding-vertical + 2px;
+        padding-bottom: $navbar-padding-vertical - 2px;
+        @include transition(color ease-in-out .2s);
 }
 
-div.subnav {
+.navbar-brand,
+.navbar-brand:hover {
+        @include transition(color ease-in-out .2s);
+}
 
-	.nav > li > a {
+// Buttons ====================================================================
 
-		color: $navbarLinkColor;
+.btn {
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
 
-		&:hover {
-			color: $navbarLinkColorHover;
-		}
-	}
+.btn-default,
+.btn-default:hover {
+	@include btn-shadow($btn-default-bg);
+}
 
-	.nav > li.active > a {
+.btn-primary,
+.btn-primary:hover {
+	@include btn-shadow($btn-primary-bg);
+}
 
-		color: $textColor;
+.btn-success,
+.btn-success:hover {
+	@include btn-shadow($btn-success-bg);
+}
 
-		&:hover {
-			color: $textColor;
-		}
-	}
+.btn-info,
+.btn-info:hover {
+	@include btn-shadow($btn-info-bg);
+}
 
-	.nav > li.dropdown > .dropdown-toggle {
-		background-color: transparent;
-	}
+.btn-warning,
+.btn-warning:hover {
+	@include btn-shadow($btn-warning-bg);
+}
 
-	.nav > li.dropdown.open > .dropdown-toggle {
+.btn-danger,
+.btn-danger:hover {
+	@include btn-shadow($btn-danger-bg);
+}
 
-		border-left: 1px solid whiteSmoke;
-		border-right: 1px solid #E5E5E5;
-		color: $textColor;
+// Typography =================================================================
 
-		&:hover {
-			color: $linkColor;
-		}
+h1, h2, h3, h4, h5, h6 {
+	color: $gray-darker;
+}
+
+// Tables =====================================================================
+
+// Forms ======================================================================
+
+// Navs =======================================================================
+
+.pagination {
+
+	.active > a,
+	.active > a:hover {
+		border-color: #ddd;
 	}
 }
 
-// NAV
-// -----------------------------------------------------
+// Indicators =================================================================
 
-.nav > li.dropdown > .dropdown-toggle,
-.nav > li.dropdown.active > .dropdown-toggle,
-.nav > li.dropdown.open > .dropdown-toggle,
-.nav > li.dropdown.open.active > .dropdown-toggle  {
+// Progress bars ==============================================================
 
-	.caret {
-		border-top: 4px solid $textColor;
-		border-top-color: $textColor;
-		opacity: 1;
-	}
+// Containers =================================================================
 
-	&:hover .caret {
-		border-top: 4px solid $linkColorHover;
-		border-top-color: $linkColorHover;
-	}
+.panel-primary {
+        .panel-title {
+                color: #fff;
+        }
 }
-
-// BUTTONS
-// -----------------------------------------------------
-
-// TABLES
-// -----------------------------------------------------
-
-// FORMS
-// -----------------------------------------------------
-
-.control-group.warning {
-	@include ctb-formFieldState(#E29235, #E29235, $warningBackground);
-}
-
-.control-group.error {
-	@include ctb-formFieldState(#C00, #C00, $errorBackground);
-}
-
-.control-group.success {
-	@include ctb-formFieldState(#2BA949, #2BA949, $successBackground);
-}
-
-// DROPDOWNS
-// -----------------------------------------------------
-
-// ALERTS, LABELS, BADGES
-// -----------------------------------------------------
-
-.alert {
-	
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-
-	h1, h2, h3, h4, h5, h6 {
-		color: $white;
-		font-weight: bold;
-		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	}
-}
-
-.label, .badge {
-
-	padding-top: 4px;
-}
-
-.label-important, .badge-important {
-	background-color: $red;
-}
-
-.label-warning, .badge-warning {
-	background-color: $orange;
-}
-
-.label-success, .badge-success {
-	background-color: $green;
-}
-
-.label-info, .badge-info {
-	background-color: $blue;
-}
-
-// MISC
-// -----------------------------------------------------
-
-.well {
-	@include box-shadow(inset 1px 1px 0 rgba(0,0,0,.1));
-}
-
-.hero-unit {
-	@include box-shadow(inset 1px 1px 0 rgba(0,0,0,.1));
-	border: 1px solid rgba(0,0,0,.1);
-}
-
-// MEDIA QUERIES
-// -----------------------------------------------------
